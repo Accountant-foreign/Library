@@ -57,7 +57,6 @@ function popUp() {
 
 function deletePopUp(){
     const elements = document.getElementsByClassName("pop-up");
-    // console.log(elements)
     while(elements.length > 0){
         elements[0].parentNode.removeChild(elements[0]);
         console.log(elements[0]);
@@ -65,14 +64,16 @@ function deletePopUp(){
     xImg.remove();
 }
 
-function Book(title, author, pages, read){
-    this.title="\""+title+"\"";
-    this.author=author;
-    this.pages=pages;
-    if(read){
-        this.read="Read"
-    } else {
-        this.read="Not Read";
+class Book{
+    constructor(title, author, pages, read) {
+        this.title="\""+title+"\"";
+        this.author=author;
+        this.pages=pages;
+        if(read){
+            this.read="Read"
+        } else {
+            this.read="Not Read";
+        }
     }
 }
 
